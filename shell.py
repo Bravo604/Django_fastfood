@@ -20,19 +20,21 @@ food2.ingredients.set([ingredient3, ingredient1, ingredient4, ingredient5],
 food1.ingredients.set([ingredient2, ingredient4],
                       through_defaults={'client': client1, 'worker': worker1})
 sum_food2 = 0
+sum_ingredient2 = 0
 
 for i in food2.ingredients.all():
     i = i.extra_price
-    sum_ingredient2 = + i
+    sum_ingredient2 += i
     sum_food2 = sum_ingredient2 + food2.start_price
     print(sum_food2)
 
 sum_food1 = 0
+sum_ingredient1 = 0
 
 
 for i in food1.ingredients.all():
     i = i.extra_price
-    sum_ingredient1 = + i
+    sum_ingredient1 += i
     sum_food1 = sum_ingredient1 + food2.start_price
     print(sum_food1)
 
